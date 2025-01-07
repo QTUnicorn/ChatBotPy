@@ -7,228 +7,307 @@ app = Flask(__name__)
 # Hàm trả lời ngẫu nhiên
 def bot_response(user_input):
     responses = {
-    "Xin chào": [
-        "Xin chào",
-        "Chào bạn, tôi có thể giúp gì cho bạn."
-    ],    
-    "Hello": [
-        "Xin chào, tôi có thể giúp gì bạn",
-        "Chào bạn, tôi có thể giúp bạn học tiếng Anh, bạn sẵn sàng chứ."
-    ],
-    "Giới thiệu": [
-        "Chatbot này giúp bạn luyện tập tiếng Anh, trả lời các câu hỏi liên quan đến từ vựng, ngữ pháp và các chủ đề học tiếng Anh cơ bản.",
-        "Tôi là một chatbot, luôn sẵn sàng hỗ trợ bạn cải thiện tiếng Anh qua các câu hỏi và bài tập."
-    ],
-    "Cách học tiếng Anh": [
-        "Học từ vựng và ngữ pháp là cách tốt nhất để xây dựng nền tảng tiếng Anh vững chắc.",
-        "Luyện nghe và nói hàng ngày sẽ giúp bạn cải thiện khả năng giao tiếp nhanh chóng.",
-        "Sử dụng ứng dụng học tiếng Anh là một phương pháp hiệu quả để luyện tập bất kỳ lúc nào.",
-        "Học qua bài hát và phim là cách thú vị để cải thiện kỹ năng nghe và mở rộng từ vựng.",
-        "Sử dụng flashcards là một cách tuyệt vời để ghi nhớ và ôn lại từ vựng một cách hiệu quả."
-    ],
-    "Sách học tiếng Anh": [
-    "Sách 'English Grammar in Use' là một trong những cuốn sách nổi tiếng giúp bạn cải thiện ngữ pháp tiếng Anh.",
-    "Cuốn 'Word Power Made Easy' là lựa chọn tuyệt vời để nâng cao vốn từ vựng tiếng Anh của bạn.",
-    "'English Vocabulary in Use' sẽ giúp bạn học từ vựng theo các chủ đề, rất phù hợp cho người học ở mọi trình độ.",
-    "Sách 'The Elements of Style' cung cấp những quy tắc quan trọng giúp bạn viết tiếng Anh một cách rõ ràng và chính xác.",
-    "'Listening Practice through Dictation' là cuốn sách hữu ích để bạn cải thiện khả năng nghe và viết chính tả tiếng Anh."
-    ],
-    "Bạn có thể làm gì": [
-        "Tôi có thể giúp bạn luyện tập từ vựng, cấu trúc câu và cải thiện khả năng phát âm tiếng Anh.",
-        "Tôi có thể giải thích các khái niệm ngữ pháp, cung cấp câu trả lời cho các câu hỏi học tiếng Anh và giúp bạn luyện tập."
-    ],
-    "Làm sao để bắt đầu học với bạn": [
-        "Bạn chỉ cần đặt câu hỏi về tiếng Anh hoặc yêu cầu tôi giải thích các khái niệm, tôi sẽ giúp bạn ngay lập tức.",
-        "Hãy nhập câu hỏi về từ vựng, ngữ pháp hoặc bất kỳ vấn đề tiếng Anh nào bạn muốn tìm hiểu."
-    ],
-    "set": [
-        "Từ 'set' có thể có nghĩa là 'đặt', ví dụ: 'I set the book on the table' (Tôi đặt quyển sách lên bàn).",
-        "Từ 'set' cũng có thể có nghĩa là 'bộ', ví dụ: 'I have a set of tools' (Tôi có một bộ dụng cụ).",
-        "Ngoài ra, 'set' có thể có nghĩa là 'chuẩn bị', ví dụ: 'Set the alarm for 7 AM' (Cài đặt báo thức lúc 7 giờ sáng)."
-    ],
-    "run": [
-        "Từ 'run' có thể có nghĩa là 'chạy', ví dụ: 'She runs every morning' (Cô ấy chạy mỗi sáng).",
-        "Từ 'run' cũng có thể có nghĩa là 'vận hành', ví dụ: 'The machine is running' (Máy móc đang vận hành).",
-        "Ngoài ra, 'run' có thể có nghĩa là 'chạy đua', ví dụ: 'He runs for president' (Anh ấy tranh cử tổng thống)."
-    ],
-    "light": [
-        "Từ 'light' có thể có nghĩa là 'ánh sáng', ví dụ: 'The light is bright' (Ánh sáng sáng).",
-        "Từ 'light' cũng có thể có nghĩa là 'nhẹ', ví dụ: 'This bag is light' (Cái túi này nhẹ).",
-        "Ngoài ra, 'light' có thể có nghĩa là 'thắp sáng', ví dụ: 'Light the candle' (Thắp nến)."
-    ],
-    "play": [
-        "Từ 'play' có thể có nghĩa là 'chơi', ví dụ: 'Children play in the park' (Trẻ em chơi trong công viên).",
-        "Từ 'play' cũng có thể có nghĩa là 'biểu diễn', ví dụ: 'She plays the piano beautifully' (Cô ấy chơi đàn piano rất đẹp).",
-        "Ngoài ra, 'play' có thể có nghĩa là 'phim hoặc vở kịch', ví dụ: 'They are going to see a play tonight' (Họ sẽ xem một vở kịch tối nay)."
-    ],
-    "take": [
-        "Từ 'take' có thể có nghĩa là 'cầm', ví dụ: 'Take this book to the library' (Mang quyển sách này đến thư viện).",
-        "Từ 'take' cũng có thể có nghĩa là 'bắt', ví dụ: 'Take a picture' (Chụp một bức ảnh).",
-        "Ngoài ra, 'take' có thể có nghĩa là 'thời gian', ví dụ: 'This task will take an hour' (Công việc này sẽ mất một giờ)."
-    ],
-    "make": [
-    "Từ 'make' có thể có nghĩa là 'làm', ví dụ: 'She makes delicious cakes' (Cô ấy làm bánh rất ngon).",
-    "Từ 'make' cũng có thể có nghĩa là 'tạo ra', ví dụ: 'This company makes high-quality products' (Công ty này tạo ra các sản phẩm chất lượng cao).",
-    "Ngoài ra, 'make' có thể có nghĩa là 'quyết định', ví dụ: 'We need to make a decision soon' (Chúng ta cần phải quyết định sớm)."
-    ],
-    "buy": [
-        "Từ 'buy' có thể có nghĩa là 'mua', ví dụ: 'I bought a new phone yesterday' (Hôm qua tôi đã mua một chiếc điện thoại mới).",
-        "Từ 'buy' cũng có thể có nghĩa là 'đầu tư', ví dụ: 'They bought a lot of stock in the company' (Họ đã đầu tư vào nhiều cổ phiếu của công ty).",
-        "Ngoài ra, 'buy' có thể có nghĩa là 'tin tưởng', ví dụ: 'I don’t buy his excuse' (Tôi không tin vào lý do của anh ấy)."
-    ],
-    "help": [
-        "Từ 'help' có thể có nghĩa là 'giúp', ví dụ: 'Can you help me with this task?' (Bạn có thể giúp tôi với công việc này không?).",
-        "Từ 'help' cũng có thể có nghĩa là 'hỗ trợ', ví dụ: 'We need to help the community' (Chúng ta cần hỗ trợ cộng đồng).",
-        "Ngoài ra, 'help' có thể có nghĩa là 'góp phần', ví dụ: 'This action will help improve the situation' (Hành động này sẽ giúp cải thiện tình hình)."
-    ],
-    "Làm thế nào để cải thiện từ vựng tiếng Anh của tôi?": [
-        "Bạn có thể học từ mới qua các câu ví dụ, tra cứu các từ vựng trong các chủ đề và luyện tập qua các câu hỏi từ chatbot.",
-        "Hãy sử dụng từ vựng mới trong các câu của bạn và luyện tập thường xuyên để nhớ lâu hơn."
-    ],
-    "Làm sao để học ngữ pháp tiếng Anh?": [
-        "Hãy học từng cấu trúc ngữ pháp cụ thể và luyện tập qua các ví dụ thực tế.",
-        "Đọc các bài viết, câu chuyện ngắn và chú ý đến cách sử dụng các thì và cấu trúc câu."
-    ],
-    "Câu lệnh cơ bản trong tiếng Anh là gì?": [
-        "Câu lệnh cơ bản gồm chủ ngữ, động từ và tân ngữ như: 'I eat apples' (Tôi ăn táo).",
-        "Để hỏi một câu đơn giản, bạn có thể sử dụng 'What is your name?' (Tên bạn là gì?)."
-    ],
-    "Cấu trúc câu hỏi trong tiếng Anh như thế nào?": [
-        "Cấu trúc câu hỏi đơn giản là: Wh-question (What, How, Why...) + động từ + chủ ngữ.",
-        "Ví dụ: 'What is your name?' (Tên bạn là gì?)."
-    ],
-    "Câu hỏi 'What is your name?' có ý nghĩa gì?": [
-        "Câu hỏi này dùng để hỏi tên của người khác, có nghĩa là 'Tên bạn là gì?'"
-    ],
-    "Câu hỏi 'How are you?' có nghĩa là gì?": [
-        "Câu hỏi này dùng để hỏi về tình trạng sức khỏe hoặc tâm trạng của người khác, có nghĩa là 'Bạn khỏe không?'"
-    ],
-    "Câu trả lời 'I am fine, thank you' có nghĩa là gì?": [
-        "Câu trả lời này có nghĩa là 'Tôi khỏe, cảm ơn bạn'."
-    ],
-    "Câu 'I like apples' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Tôi thích táo'."
-    ],
-    "I don’t understand'": [
-        "Câu này có nghĩa là 'Tôi không hiểu'."
-    ],
-    "Can you help me?": [
-        "Câu này có nghĩa là 'Bạn có thể giúp tôi không?'"
-    ],
-    "Làm sao để hỏi giờ trong tiếng Anh?": [
-        "Bạn có thể hỏi: 'What time is it?' (Mấy giờ rồi?)."
-    ],
-    "Cấu trúc câu 'I have a book' là gì?": [
-        "Cấu trúc này là một câu khẳng định với chủ ngữ 'I', động từ 'have' và tân ngữ 'a book'."
-    ],
-    "Làm sao để nói về sở thích trong tiếng Anh?": [
-        "Bạn có thể nói: 'I like reading' (Tôi thích đọc sách)."
-    ],
-    "Câu 'Where do you live?' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Bạn sống ở đâu?'"
-    ],
-    "Làm sao để yêu cầu sự giúp đỡ trong tiếng Anh?": [
-        "Bạn có thể nói: 'Can you help me, please?' (Bạn có thể giúp tôi không?)."
-    ],
-    "Câu 'I’m sorry' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Tôi xin lỗi'."
-    ],
-    "Câu 'Thank you' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Cảm ơn bạn'."
-    ],
-    "Làm sao để mô tả cảm xúc trong tiếng Anh?": [
-        "Bạn có thể nói: 'I am happy' (Tôi vui), 'I am sad' (Tôi buồn)."
-    ],
-    "Câu 'She is my friend' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Cô ấy là bạn của tôi'."
-    ],
-    "Làm sao để hỏi về sở thích của người khác?": [
-        "Bạn có thể hỏi: 'What do you like to do?' (Bạn thích làm gì?)."
-    ],
-    "Câu 'I am studying English' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Tôi đang học tiếng Anh'."
-    ],
-    "Câu 'He plays football every day' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Anh ấy chơi bóng đá mỗi ngày'."
-    ],
-    "Làm sao để mô tả thời tiết trong tiếng Anh?": [
-        "Bạn có thể nói: 'It’s sunny' (Trời nắng), 'It’s raining' (Trời mưa)."
-    ],
-    "Câu 'I’m tired' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Tôi mệt'."
-    ],
-    "Câu 'Let’s go!' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Chúng ta đi thôi!'"
-    ],
-    "Câu 'Can I have a coffee?' có nghĩa là gì?": [
-        "Câu này có nghĩa là 'Tôi có thể có một cốc cà phê không?'"
-    ],
-    "Làm sao để khen ngợi ai đó trong tiếng Anh?": [
-        "Bạn có thể nói: 'You look great!' (Bạn trông tuyệt lắm!)."
-    ],
-    "Câu 'I have been to Paris' có nghĩa là gì": [
-        "Câu này có nghĩa là 'Tôi đã từng đến Paris'."
-    ],
-    "Làm sao để nói về một sở thích trong quá khứ": [
-        "Bạn có thể nói: 'I used to play football' (Tôi đã từng chơi bóng đá)."
-    ],
-    "Câu 'It’s my turn' có nghĩa là gì": [
-        "Câu này có nghĩa là 'Đến lượt tôi'."
-    ],
-    "Làm sao để yêu cầu lời khuyên trong tiếng Anh": [
-        "Bạn có thể hỏi: 'What do you think?' (Bạn nghĩ sao?)."
-    ],
-    "Làm sao để cải thiện khả năng phát âm tiếng Anh": [
-        "Luyện tập nói với người bản xứ, sử dụng các công cụ phát âm trực tuyến và nghe podcast với phát âm rõ ràng.",
-        "Ghi âm giọng nói của bản thân và so sánh với người bản xứ, sử dụng các ứng dụng phát âm và lặp lại từ vựng.",
-        "Xem video về phát âm, luyện tập với các câu đố vần và nhờ người khác nhận xét."
-    ],
-    "Làm sao để học tiếng Anh hiệu quả hơn": [
-        "Đặt mục tiêu rõ ràng, luyện tập thường xuyên và đắm mình vào ngôn ngữ qua phim ảnh và sách.",
-        "Lập kế hoạch học tập, tập trung vào những phần bạn gặp khó khăn và ôn lại thường xuyên.",
-        "Luyện nói tiếng Anh với người khác, nghe các nội dung tiếng Anh mỗi ngày và đọc sách bằng tiếng Anh."
-    ],
-    "Làm sao để sử dụng tiếng Anh trong công việc hàng ngày": [
-        "Luyện nói tiếng Anh với đồng nghiệp, sử dụng từ vựng liên quan đến công việc và xem các video tiếng Anh về nghề nghiệp của bạn.",
-        "Tham gia các cuộc họp bằng tiếng Anh, ghi chú bằng tiếng Anh và viết email bằng tiếng Anh.",
-        "Sử dụng tiếng Anh trong các công việc hàng ngày, tham gia các buổi hội thảo bằng tiếng Anh và đặt nhắc nhở bằng tiếng Anh để đắm chìm trong ngôn ngữ."
-    ],
-    "Làm sao để học tiếng Anh qua bài hát": [
-        "Chọn các bài hát có lời rõ ràng, tra cứu nghĩa của các từ mới và hát theo để luyện phát âm.",
-        "Nghe các bài hát, lặp lại lời bài hát và tập trung học từ vựng mới qua âm nhạc.",
-        "Chọn các bài hát bạn yêu thích, ghi lại lời bài hát và luyện hát để cải thiện khả năng nói trôi chảy."
-    ],
-    "Làm sao để cải thiện kỹ năng nghe trong tiếng Anh": [
-        "Nghe podcast, xem các chương trình truyền hình có phụ đề tiếng Anh và luyện tập với các bài tập nghe.",
-        "Xem video tiếng Anh không có phụ đề, nghe các giọng điệu khác nhau và luyện nghe với nhiều chủ đề khác nhau.",
-        "Sử dụng các ứng dụng nghe, xem phim bằng tiếng Anh và nghe các bản tin để cải thiện khả năng hiểu."
-    ],
-    "Làm sao để học tiếng Anh một cách sáng tạo": [
-        "Sử dụng thẻ flashcards, tạo sơ đồ tư duy và thử học qua kể chuyện hoặc đóng vai.",
-        "Biến việc học trở nên thú vị bằng cách sử dụng trò chơi ngôn ngữ, xem các video sáng tạo và luyện tập qua viết sáng tạo.",
-        "Học qua vẽ, sử dụng công cụ trực quan và kết hợp âm nhạc hoặc nghệ thuật vào việc học."
-    ],
-    "Làm sao để hiểu các cấu trúc ngữ pháp phức tạp trong tiếng Anh?": [
-        "Chia nhỏ chúng thành các phần dễ hiểu hơn, luyện tập với các ví dụ và tìm kiếm lời giải thích từ tài liệu ngữ pháp.",
-        "Học qua ngữ cảnh, sử dụng bài tập để củng cố quy tắc ngữ pháp và học cùng giáo viên để làm rõ vấn đề.",
-        "Tập trung vào việc hiểu một quy tắc tại một thời điểm, sử dụng ví dụ thực tế và luyện tập qua bài tập."
-    ],
-    "Làm sao để làm quen với tiếng Anh chuyên ngành": [
-        "Đọc các bài báo hoặc sách liên quan đến lĩnh vực của bạn, học các thuật ngữ chuyên ngành và tham gia các hội thảo hoặc khóa học chuyên ngành bằng tiếng Anh.",
-        "Học từ vựng chuyên ngành, đọc các bài nghiên cứu và giao tiếp với các chuyên gia trong lĩnh vực của bạn.",
-        "Tham gia các cộng đồng trực tuyến trong lĩnh vực của bạn, tham gia các khóa học chuyên ngành và luyện tập sử dụng thuật ngữ chuyên môn trong công việc."
-    ],
-    "Làm sao để duy trì sự kiên nhẫn khi học tiếng Anh": [
-        "Đặt mục tiêu nhỏ, dễ đạt được, theo dõi tiến độ và tự thưởng khi hoàn thành các mốc quan trọng.",
-        "Tập trung vào tiến bộ thay vì hoàn hảo, nghỉ ngơi khi cần thiết và duy trì động lực với một lịch trình học tập hợp lý.",
-        "Ăn mừng những chiến thắng nhỏ, duy trì sự đều đặn và nhắc nhở bản thân về mục tiêu học ngôn ngữ dài hạn."
-    ],
-    "Làm sao để cải thiện kỹ năng đọc tiếng Anh": [
-        "Đọc nhiều loại văn bản, tóm tắt lại những gì đã đọc và mở rộng vốn từ vựng qua ngữ cảnh.",
-        "Chọn những tài liệu đọc thú vị, đánh dấu các từ mới và luyện tập kỹ năng đọc lướt và quét nhanh.",
-        "Đọc thường xuyên, luyện tập nhận diện ý chính và học từ vựng mới qua ngữ cảnh."
-    ]
-}
+        "xin chào": [
+            "xin chào",
+            "chào bạn tôi có thể giúp gì cho bạn"
+        ],    
+        "hello": [
+            "xin chào tôi có thể giúp gì bạn",
+            "chào bạn tôi có thể giúp bạn học tiếng anh bạn sẵn sàng chứ"
+        ],
+        "giới thiệu": [
+            "chatbot này giúp bạn luyện tập tiếng anh trả lời các câu hỏi liên quan đến từ vựng ngữ pháp và các chủ đề học tiếng anh cơ bản",
+            "tôi là một chatbot luôn sẵn sàng hỗ trợ bạn cải thiện tiếng anh qua các câu hỏi và bài tập"
+        ],
+        "cách học tiếng anh": [
+            "học từ vựng và ngữ pháp là cách tốt nhất để xây dựng nền tảng tiếng anh vững chắc",
+            "luyện nghe và nói hàng ngày sẽ giúp bạn cải thiện khả năng giao tiếp nhanh chóng",
+            "sử dụng ứng dụng học tiếng anh là một phương pháp hiệu quả để luyện tập bất kỳ lúc nào",
+            "học qua bài hát và phim là cách thú vị để cải thiện kỹ năng nghe và mở rộng từ vựng",
+            "sử dụng flashcards là một cách tuyệt vời để ghi nhớ và ôn lại từ vựng một cách hiệu quả"
+        ],
+        "sách học tiếng anh": [
+            "sách 'english grammar in use' là một trong những cuốn sách nổi tiếng giúp bạn cải thiện ngữ pháp tiếng anh",
+            "cuốn 'word power made easy' là lựa chọn tuyệt vời để nâng cao vốn từ vựng tiếng anh của bạn",
+            "'english vocabulary in use' sẽ giúp bạn học từ vựng theo các chủ đề rất phù hợp cho người học ở mọi trình độ",
+            "sách 'the elements of style' cung cấp những quy tắc quan trọng giúp bạn viết tiếng anh một cách rõ ràng và chính xác",
+            "'listening practice through dictation' là cuốn sách hữu ích để bạn cải thiện khả năng nghe và viết chính tả tiếng anh"
+        ],
+        "bạn có thể làm gì": [
+            "tôi có thể giúp bạn luyện tập từ vựng cấu trúc câu và cải thiện khả năng phát âm tiếng anh",
+            "tôi có thể trả lời câu hỏi của bạn về các chủ đề học tiếng anh"
+        ],
+        "làm sao để học tiếng anh hiệu quả": [
+        "học tiếng anh hiệu quả là kiên trì luyện tập và tìm phương pháp học phù hợp",
+        "bạn nên bắt đầu từ những kiến thức cơ bản sau đó dần dần nâng cao dần"
+        ],
+        "cách học từ vựng tiếng anh": [
+            "học từ vựng qua flashcards và ôn lại đều đặn sẽ giúp bạn nhớ lâu",
+            "lặp lại từ vựng thường xuyên và học theo chủ đề sẽ giúp bạn ghi nhớ tốt hơn"
+        ],
+        "cách cải thiện kỹ năng nghe tiếng anh": [
+            "luyện nghe qua các bài hát, phim và podcast tiếng anh là cách tốt để cải thiện kỹ năng nghe",
+            "thực hành nghe mỗi ngày và chú ý đến cách phát âm của người bản ngữ"
+        ],
+        "cách học ngữ pháp tiếng anh": [
+            "học ngữ pháp qua sách và làm bài tập ngữ pháp sẽ giúp bạn củng cố kiến thức",
+            "áp dụng ngữ pháp vào thực tế khi nói và viết để ghi nhớ lâu hơn"
+        ],
+        "cách luyện phát âm tiếng anh": [
+            "luyện phát âm qua các video hướng dẫn phát âm của người bản ngữ là rất hữu ích",
+            "bạn có thể ghi âm lại giọng nói của mình và so sánh với người bản ngữ để cải thiện"
+        ],
+        "có nên học tiếng anh qua bài hát": [
+            "học qua bài hát giúp bạn cải thiện kỹ năng nghe và phát âm, đồng thời tạo sự hứng thú khi học",
+            "chọn bài hát với tốc độ chậm và từ vựng dễ hiểu để dễ dàng tiếp thu"
+        ],
+        "cách học tiếng anh giao tiếp": [
+            "tham gia vào các nhóm học tiếng anh hoặc tìm đối tác để luyện giao tiếp thường xuyên",
+            "bạn nên tập trung vào các câu giao tiếp cơ bản và sử dụng chúng trong các tình huống thực tế"
+        ],
+        "làm sao để nhớ lâu từ vựng": [
+            "áp dụng phương pháp spaced repetition để ôn lại từ vựng một cách hiệu quả",
+            "học từ vựng theo hình ảnh hoặc liên kết với các kỷ niệm cá nhân sẽ giúp bạn ghi nhớ lâu hơn"
+        ],
+        "bài học tiếng anh cho người mới bắt đầu": [
+            "bạn có thể bắt đầu học tiếng anh với các bài học về từ vựng cơ bản và cấu trúc câu đơn giản",
+            "học từ vựng theo chủ đề giúp bạn dễ dàng ghi nhớ và áp dụng vào thực tế"
+        ],
+        "tiếng anh giao tiếp cơ bản": [
+            "học các câu hỏi và câu trả lời đơn giản giúp bạn giao tiếp dễ dàng trong các tình huống hằng ngày",
+            "luyện tập các câu giao tiếp như 'how are you?', 'where are you from?' sẽ giúp bạn tự tin hơn"
+        ],
+        "phương pháp học tiếng anh hiệu quả cho người bận rộn": [
+            "bạn có thể học qua ứng dụng tiếng anh trong thời gian rảnh để tối ưu thời gian học",
+            "học mỗi ngày một ít, sử dụng từ vựng và ngữ pháp trong thực tế sẽ giúp bạn học hiệu quả"
+        ],
+        "có nên học tiếng anh qua xem phim": [
+            "xem phim là cách thú vị để cải thiện kỹ năng nghe và học từ vựng theo ngữ cảnh",
+            "bạn nên xem phim có phụ đề tiếng anh để hiểu rõ hơn về từ vựng và cách phát âm"
+        ],
+        "cách tăng khả năng viết tiếng anh": [
+            "bạn nên viết thường xuyên và nhờ người khác kiểm tra để cải thiện kỹ năng viết",
+            "cải thiện khả năng viết bằng cách học các mẫu câu và cấu trúc câu tiếng anh thông dụng"
+        ],
+        "cách học tiếng anh giao tiếp với người bản ngữ": [
+            "tham gia các câu lạc bộ tiếng anh hoặc tìm bạn bản ngữ để luyện giao tiếp",
+            "bạn có thể thực hành giao tiếp với người bản ngữ qua ứng dụng trò chuyện hoặc video call"
+        ],
+        "cách phát âm chuẩn tiếng anh": [
+            "học phát âm theo từ điển tiếng anh có phát âm chuẩn và luyện tập thường xuyên",
+            "chú ý đến các âm vị trong tiếng anh như âm 'th', 'r', và 'l' để phát âm chuẩn hơn"
+        ],
+        "làm sao để cải thiện kỹ năng đọc tiếng anh": [
+            "đọc sách tiếng anh và bài báo là cách tuyệt vời để cải thiện kỹ năng đọc",
+            "bạn nên đọc các bài viết có từ vựng phù hợp với trình độ của mình để không bị choáng ngợp"
+        ],
+        "có thể học tiếng anh qua trò chơi không": [
+            "trò chơi học tiếng anh sẽ giúp bạn học mà không cảm thấy nhàm chán và giúp ghi nhớ lâu",
+            "bạn có thể chơi các trò chơi từ vựng hoặc ngữ pháp trên các ứng dụng học tiếng anh"
+        ],
+        "có nên học tiếng anh với giáo viên": [
+            "học tiếng anh với giáo viên giúp bạn được chỉnh sửa phát âm và ngữ pháp ngay lập tức",
+            "bạn có thể tham gia các lớp học trực tuyến hoặc học qua video với giáo viên để cải thiện nhanh chóng"
+        ],
+        "phương pháp học từ vựng hiệu quả": [
+            "phương pháp học từ vựng qua flashcards và ôn tập định kỳ rất hiệu quả",
+            "học từ vựng theo các chủ đề như gia đình, công việc, du lịch sẽ giúp bạn nhớ nhanh hơn"
+        ],
+        "tại sao phải học tiếng anh": [
+            "tiếng anh là ngôn ngữ quốc tế giúp bạn giao tiếp và mở rộng cơ hội nghề nghiệp",
+            "học tiếng anh giúp bạn tiếp cận với nhiều nguồn tài liệu học tập và giải trí phong phú"
+        ],
+        "làm sao để học tiếng anh nhanh chóng": [
+            "học tiếng anh mỗi ngày và tạo thói quen sử dụng tiếng anh trong cuộc sống hàng ngày sẽ giúp bạn tiến bộ nhanh chóng",
+            "học qua các ứng dụng tiếng anh hoặc tham gia lớp học giúp bạn học hiệu quả hơn"
+        ],
+        "có nên học tiếng anh qua sách vở": [
+            "sách vở cung cấp nền tảng vững chắc về ngữ pháp và từ vựng, giúp bạn học tiếng anh hệ thống hơn",
+            "bạn có thể kết hợp học sách với thực hành giao tiếp để phát huy hiệu quả tối đa"
+        ],
+        "có nên học tiếng anh qua podcast": [
+            "học tiếng anh qua podcast giúp bạn luyện nghe và cải thiện khả năng hiểu ngữ điệu tự nhiên của người bản ngữ",
+            "bạn có thể nghe podcast tiếng anh mỗi ngày để cải thiện kỹ năng nghe của mình"
+        ],
+        "cách học tiếng anh cho người mới bắt đầu": [
+            "bạn nên bắt đầu với các bài học cơ bản về từ vựng và ngữ pháp, rồi nâng cao dần",
+            "học tiếng anh mỗi ngày một chút và thực hành giao tiếp sẽ giúp bạn nhanh chóng cải thiện"
+        ],
+        "các tài liệu học tiếng anh tốt nhất": [
+            "sách 'english grammar in use' và 'english vocabulary in use' là những tài liệu tuyệt vời giúp bạn học tiếng anh",
+            "bạn cũng có thể sử dụng các ứng dụng học tiếng anh như Duolingo, Babbel để luyện tập mỗi ngày"
+        ],
+        "làm sao để nhớ từ vựng lâu dài": [
+            "lặp lại từ vựng hàng ngày và liên kết từ vựng với hình ảnh hoặc tình huống sẽ giúp bạn nhớ lâu",
+            "sử dụng từ vựng trong các câu và tình huống thực tế sẽ giúp bạn ghi nhớ lâu dài"
+        ],
+        "có nên tham gia khóa học tiếng anh online": [
+            "khóa học online giúp bạn học tiếng anh linh hoạt và tiết kiệm thời gian",
+            "nhiều khóa học tiếng anh online cung cấp tài liệu chất lượng và giảng viên giỏi"
+        ],
+        "do": [
+            "Động từ 'do' được dùng để diễn tả hành động làm cái gì đó, ví dụ: 'I do my homework every day' (Tôi làm bài tập mỗi ngày).",
+            "'Do' còn được sử dụng trong câu hỏi, ví dụ: 'Do you like coffee?' (Bạn thích cà phê không?).",
+            "Trong câu phủ định, 'do' được sử dụng như 'I do not understand' (Tôi không hiểu).",
+            "'Do' cũng có thể dùng để nhấn mạnh hành động trong câu, ví dụ: 'I do want to go!' (Tôi thực sự muốn đi!)."
+        ],
+        "make": [
+            "'Make' diễn tả hành động tạo ra hoặc sản xuất cái gì đó, ví dụ: 'She makes a cake every Sunday' (Cô ấy làm bánh mỗi Chủ nhật).",
+            "Cụm từ 'make a decision' có nghĩa là đưa ra quyết định, ví dụ: 'We need to make a decision soon' (Chúng ta cần đưa ra quyết định sớm).",
+            "'Make a mistake' có nghĩa là mắc lỗi, ví dụ: 'I made a mistake in the test' (Tôi đã mắc lỗi trong bài kiểm tra).",
+            "'Make' còn có thể diễn tả việc tạo ra một điều kiện hay sự kiện, như 'make an appointment' (hẹn gặp)."
+        ],
+        "get": [
+            "'Get' có thể chỉ sự nhận, ví dụ: 'I get a gift on my birthday' (Tôi nhận quà vào ngày sinh nhật).",
+            "'Get' cũng có thể chỉ sự di chuyển đến một nơi nào đó, ví dụ: 'I get to work at 9 AM' (Tôi đến công ty lúc 9 giờ sáng).",
+            "'Get' còn diễn tả sự thay đổi trạng thái, ví dụ: 'I get tired after working' (Tôi mệt mỏi sau khi làm việc).",
+            "'Get' còn dùng để diễn tả việc đạt được cái gì đó, ví dụ: 'She got the job' (Cô ấy đã có được công việc)."
+        ],
+        "go": [
+            "'Go' chỉ sự di chuyển, ví dụ: 'I go to school by bus' (Tôi đi học bằng xe buýt).",
+            "'Go on' có nghĩa là tiếp tục, ví dụ: 'The meeting will go on for an hour' (Cuộc họp sẽ tiếp tục trong một giờ).",
+            "'Go ahead' có thể có nghĩa là tiếp tục hoặc bắt đầu, ví dụ: 'Go ahead and start without me' (Hãy bắt đầu mà không có tôi).",
+            "'Go' cũng có thể diễn tả sự thay đổi trạng thái, ví dụ: 'The weather is going bad' (Thời tiết đang xấu đi)."
+        ],
+        "see": [
+            "'See' có nghĩa là nhìn thấy, ví dụ: 'I see the sun rising' (Tôi thấy mặt trời mọc).",
+            "'See' cũng có thể được dùng trong các tình huống gặp gỡ, ví dụ: 'I will see you tomorrow' (Tôi sẽ gặp bạn vào ngày mai).",
+            "'See' còn được dùng để diễn tả sự hiểu biết, ví dụ: 'Now I see what you mean' (Bây giờ tôi hiểu bạn muốn nói gì).",
+            "'See' trong một số cụm từ có nghĩa là xem xét hoặc thẩm định, ví dụ: 'Let's see what happens' (Hãy xem chuyện gì sẽ xảy ra)."
+        ],
+        "know": [
+            "'Know' chỉ sự hiểu biết hoặc quen thuộc, ví dụ: 'I know the answer' (Tôi biết câu trả lời).",
+            "'Know' còn có thể diễn tả sự quen biết với một ai đó, ví dụ: 'I know him very well' (Tôi rất quen anh ấy).",
+            "'Know' có thể diễn tả sự nắm bắt thông tin, ví dụ: 'Do you know what time it is?' (Bạn có biết mấy giờ rồi không?).",
+            "'Know' cũng có thể dùng trong các cụm từ như 'I don't know' (Tôi không biết) hoặc 'get to know' (làm quen)."
+        ],
+        "have": [
+            "'Have' thường được sử dụng để chỉ sở hữu hoặc có cái gì đó, ví dụ: 'I have a car' (Tôi có một chiếc xe).",
+            "'Have' còn có thể chỉ hành động ăn uống, ví dụ: 'I have breakfast at 7 AM' (Tôi ăn sáng lúc 7 giờ sáng).",
+            "'Have' còn được dùng trong các câu hỏi và phủ định, ví dụ: 'Do you have any questions?' (Bạn có câu hỏi nào không?).",
+            "'Have' cũng có thể dùng trong các cấu trúc như 'have to' (phải), ví dụ: 'I have to go now' (Tôi phải đi ngay bây giờ)."
+        ],
+        "take": [
+            "'Take' diễn tả hành động lấy hoặc nhận cái gì đó, ví dụ: 'I take a book from the shelf' (Tôi lấy một cuốn sách từ kệ).",
+            "'Take' cũng có thể dùng để chỉ việc mang cái gì đi, ví dụ: 'Take your umbrella' (Mang theo dù của bạn).",
+            "'Take' còn được dùng trong cụm từ 'take a break' (nghỉ giải lao), ví dụ: 'Let's take a break' (Hãy nghỉ một chút).",
+            "'Take' cũng diễn tả hành động tham gia vào một hoạt động nào đó, ví dụ: 'I will take part in the competition' (Tôi sẽ tham gia cuộc thi)."
+        ],
+        "find": [
+            "'Find' diễn tả hành động tìm kiếm hoặc phát hiện cái gì đó, ví dụ: 'I found my keys' (Tôi đã tìm thấy chìa khóa của mình).",
+            "'Find' còn có thể chỉ sự phát hiện thông tin, ví dụ: 'I found out the truth' (Tôi đã phát hiện ra sự thật).",
+            "'Find' còn diễn tả việc đạt được cái gì đó, ví dụ: 'I finally found a solution' (Cuối cùng tôi đã tìm ra giải pháp).",
+            "'Find' cũng được sử dụng trong cụm từ 'find it hard' (cảm thấy khó), ví dụ: 'I find it hard to wake up early' (Tôi thấy khó để thức dậy sớm)."
+        ],
+        "think": [
+            "'Think' có nghĩa là suy nghĩ, ví dụ: 'I think about my future' (Tôi suy nghĩ về tương lai của mình).",
+            "'Think' còn dùng trong câu hỏi để hỏi ý kiến, ví dụ: 'What do you think of this idea?' (Bạn nghĩ sao về ý tưởng này?).",
+            "'Think' còn có thể diễn tả một sự đánh giá, ví dụ: 'I think he is a good teacher' (Tôi nghĩ anh ấy là một giáo viên tốt).",
+            "'Think' còn được dùng trong cấu trúc 'think about' (nghĩ về), ví dụ: 'I need to think about it' (Tôi cần suy nghĩ về điều đó)."
+        ],
+        "come": [
+            "'Come' dùng để chỉ sự di chuyển đến một địa điểm, ví dụ: 'She is coming to the party' (Cô ấy sẽ đến bữa tiệc).",
+            "'Come' cũng có thể dùng trong các cụm từ như 'come back' (trở lại), ví dụ: 'He came back after two weeks' (Anh ấy đã trở lại sau hai tuần).",
+            "'Come' còn có thể chỉ sự xảy ra một sự kiện, ví dụ: 'The storm is coming' (Cơn bão sắp đến).",
+            "'Come' cũng có thể diễn tả sự tham gia, ví dụ: 'Come to see me tomorrow' (Đến gặp tôi vào ngày mai)."
+        ],
+        "call": [
+            "'Call' chỉ hành động gọi điện thoại hoặc kêu gọi ai đó, ví dụ: 'I will call you later' (Tôi sẽ gọi cho bạn sau).",
+            "'Call' cũng có thể chỉ sự gọi tên, ví dụ: 'She called my name' (Cô ấy gọi tên tôi).",
+            "'Call' còn diễn tả hành động mời, ví dụ: 'Call me for dinner' (Gọi tôi vào bữa tối).",
+            "'Call' cũng có thể được dùng trong cấu trúc 'call it a day' (kết thúc công việc trong ngày), ví dụ: 'Let’s call it a day' (Chúng ta kết thúc công việc thôi)."
+        ],
+        "help": [
+            "'Help' diễn tả hành động hỗ trợ hoặc giúp đỡ, ví dụ: 'Can you help me with this task?' (Bạn có thể giúp tôi với công việc này không?).",
+            "'Help' cũng có thể chỉ sự hỗ trợ trong tình huống khẩn cấp, ví dụ: 'She called for help' (Cô ấy gọi trợ giúp).",
+            "'Help' còn được dùng trong các cụm từ như 'help out' (giúp đỡ ai đó), ví dụ: 'I will help you out' (Tôi sẽ giúp bạn).",
+            "'Help' cũng có thể diễn tả sự đóng góp vào việc gì đó, ví dụ: 'This will help improve your skills' (Điều này sẽ giúp cải thiện kỹ năng của bạn)."
+        ],
+        "work": [
+            "'Work' diễn tả hành động làm việc, ví dụ: 'I work at a tech company' (Tôi làm việc tại một công ty công nghệ).",
+            "'Work' cũng có thể chỉ sự vận hành của một thiết bị, ví dụ: 'The machine works perfectly' (Cái máy hoạt động hoàn hảo).",
+            "'Work' còn dùng để chỉ sự nỗ lực, ví dụ: 'I work hard to succeed' (Tôi làm việc chăm chỉ để thành công).",
+            "'Work' trong cụm từ 'work on' có nghĩa là làm việc vào một dự án, ví dụ: 'I am working on a new project' (Tôi đang làm việc trên một dự án mới)."
+        ],
+        "love": [
+            "'Love' chỉ tình yêu hoặc sự thích thú đối với ai đó hoặc cái gì đó, ví dụ: 'I love reading books' (Tôi thích đọc sách).",
+            "'Love' cũng có thể chỉ tình cảm mạnh mẽ, ví dụ: 'They love each other' (Họ yêu nhau).",
+            "'Love' còn diễn tả sự yêu thích một điều gì đó, ví dụ: 'I love this movie' (Tôi yêu bộ phim này).",
+            "'Love' trong cấu trúc 'fall in love' có nghĩa là phải lòng ai đó, ví dụ: 'They fell in love quickly' (Họ đã yêu nhau rất nhanh)."
+        ],
+        "feel": [
+            "'Feel' diễn tả cảm giác về một trạng thái nào đó, ví dụ: 'I feel happy today' (Hôm nay tôi cảm thấy vui vẻ).",
+            "'Feel' còn dùng để mô tả cảm giác về thể chất, ví dụ: 'I feel tired after the workout' (Tôi cảm thấy mệt mỏi sau khi tập thể dục).",
+            "'Feel' cũng có thể diễn tả sự đồng cảm, ví dụ: 'I feel sorry for you' (Tôi cảm thấy tiếc cho bạn).",
+            "'Feel' còn được dùng trong cấu trúc 'feel like' (muốn làm gì đó), ví dụ: 'I feel like going to the beach' (Tôi muốn đi biển)."
+        ],
+        "take": [
+            "'Take' diễn tả hành động lấy cái gì đó, ví dụ: 'Take a seat' (Hãy ngồi xuống).",
+            "'Take' còn có thể diễn tả hành động mang cái gì đi, ví dụ: 'I will take this book home' (Tôi sẽ mang cuốn sách này về nhà).",
+            "'Take' còn dùng trong các cụm từ như 'take part' (tham gia), ví dụ: 'She takes part in the competition' (Cô ấy tham gia cuộc thi).",
+            "'Take' cũng có thể chỉ sự chiếm thời gian, ví dụ: 'It takes about an hour to finish' (Mất khoảng một giờ để hoàn thành)."
+        ],
+        "run": [
+            "'Run' thường chỉ hành động chạy, ví dụ: 'I run every morning to stay fit' (Tôi chạy mỗi sáng để giữ sức khỏe).",
+            "'Run' cũng có thể chỉ sự vận hành của một hệ thống hoặc máy móc, ví dụ: 'The machine is running smoothly' (Máy móc đang vận hành trơn tru).",
+            "'Run' còn có thể chỉ sự lãnh đạo hoặc điều hành, ví dụ: 'She runs the marketing department' (Cô ấy điều hành bộ phận marketing).",
+            "'Run' cũng có thể diễn tả việc tham gia một cuộc thi, ví dụ: 'He runs for president' (Anh ấy tham gia tranh cử tổng thống)."
+        ],
+        "talk": [
+            "'Talk' có nghĩa là nói chuyện, ví dụ: 'We talk every day' (Chúng tôi nói chuyện mỗi ngày).",
+            "'Talk' cũng có thể chỉ việc thảo luận hoặc trao đổi ý kiến, ví dụ: 'Let’s talk about the project' (Chúng ta hãy nói về dự án).",
+            "'Talk' còn được dùng trong các cụm từ như 'talk to' (nói chuyện với ai đó), ví dụ: 'I need to talk to my boss' (Tôi cần nói chuyện với sếp).",
+            "'Talk' cũng có thể diễn tả sự giao tiếp không chính thức, ví dụ: 'I’ll talk to you later' (Tôi sẽ nói chuyện với bạn sau)."
+        ],
+        "ask": [
+            "'Ask' có nghĩa là yêu cầu hoặc hỏi, ví dụ: 'I will ask for help' (Tôi sẽ yêu cầu giúp đỡ).",
+            "'Ask' cũng có thể chỉ việc yêu cầu thông tin, ví dụ: 'Can I ask you a question?' (Tôi có thể hỏi bạn một câu hỏi không?).",
+            "'Ask' còn dùng trong các cụm từ như 'ask for' (yêu cầu cái gì), ví dụ: 'I will ask for the bill' (Tôi sẽ yêu cầu tính tiền).",
+            "'Ask' cũng có thể chỉ sự yêu cầu từ ai đó, ví dụ: 'He asked for a raise' (Anh ấy yêu cầu tăng lương)."
+        ],
+        "believe": [
+            "'Believe' có nghĩa là tin tưởng hoặc tin vào điều gì đó, ví dụ: 'I believe in hard work' (Tôi tin vào sự chăm chỉ).",
+            "'Believe' còn có thể chỉ sự thừa nhận điều gì đó là đúng, ví dụ: 'I believe he is telling the truth' (Tôi tin rằng anh ấy đang nói sự thật).",
+            "'Believe' cũng có thể chỉ niềm tin vào bản thân, ví dụ: 'Believe in yourself' (Hãy tin vào bản thân).",
+            "'Believe' còn được sử dụng trong các câu hỏi, ví dụ: 'Do you believe in ghosts?' (Bạn có tin vào ma quái không?)."
+        ],
+        "read": [
+            "'Read' có nghĩa là đọc, ví dụ: 'I read books every day' (Tôi đọc sách mỗi ngày).",
+            "'Read' cũng có thể chỉ việc đọc hiểu thông tin, ví dụ: 'I read the news every morning' (Tôi đọc tin tức mỗi sáng).",
+            "'Read' còn được dùng trong các câu yêu cầu hoặc mệnh lệnh, ví dụ: 'Please read the instructions carefully' (Vui lòng đọc kỹ hướng dẫn).",
+            "'Read' cũng có thể diễn tả việc đọc các tín hiệu, ví dụ: 'I read the signs on the road' (Tôi đọc các biển báo trên đường)."
+        ],
+        "sleep": [
+            "'Sleep' có nghĩa là ngủ, ví dụ: 'I sleep for 8 hours every night' (Tôi ngủ 8 giờ mỗi đêm).",
+            "'Sleep' cũng có thể chỉ sự thiếu tỉnh táo, ví dụ: 'I’m so tired, I need to sleep' (Tôi quá mệt, tôi cần ngủ).",
+            "'Sleep' còn dùng trong câu hỏi về thời gian ngủ, ví dụ: 'How many hours do you sleep?' (Bạn ngủ bao nhiêu giờ?).",
+            "'Sleep' cũng có thể chỉ sự thư giãn, ví dụ: 'I sleep like a baby' (Tôi ngủ ngon như một đứa trẻ)."
+        ],
+        "help": [
+            "'Help' có nghĩa là giúp đỡ, ví dụ: 'Can you help me with this problem?' (Bạn có thể giúp tôi với vấn đề này không?).",
+            "'Help' cũng có thể chỉ việc hỗ trợ trong tình huống khẩn cấp, ví dụ: 'She called for help' (Cô ấy gọi trợ giúp).",
+            "'Help' còn được dùng trong các cụm từ như 'help out' (giúp đỡ ai đó), ví dụ: 'I will help you out' (Tôi sẽ giúp bạn).",
+            "'Help' cũng có thể diễn tả sự đóng góp vào việc gì đó, ví dụ: 'This will help improve your skills' (Điều này sẽ giúp cải thiện kỹ năng của bạn)."
+        ],
+        "send": [
+            "'Send' có nghĩa là gửi, ví dụ: 'I will send you an email' (Tôi sẽ gửi bạn một email).",
+            "'Send' cũng có thể chỉ việc chuyển cái gì đó từ một nơi này đến nơi khác, ví dụ: 'Send the package to my office' (Gửi gói hàng đến văn phòng của tôi).",
+            "'Send' còn có thể chỉ sự chuyển giao thông tin, ví dụ: 'I will send you the report by tomorrow' (Tôi sẽ gửi bạn báo cáo vào ngày mai).",
+            "'Send' cũng có thể chỉ sự chuyển động của tín hiệu hoặc thông điệp, ví dụ: 'Please send my regards to her' (Vui lòng gửi lời chào của tôi tới cô ấy)."
+        ],
+        "buy": [
+            "'Buy' có nghĩa là mua, ví dụ: 'I am going to buy a new phone' (Tôi sẽ mua một chiếc điện thoại mới).",
+            "'Buy' cũng có thể chỉ việc trả tiền để sở hữu cái gì đó, ví dụ: 'She buys groceries every week' (Cô ấy mua thực phẩm mỗi tuần).",
+            "'Buy' còn có thể chỉ sự ủng hộ một cái gì đó, ví dụ: 'I don’t buy his excuse' (Tôi không tin vào lý do của anh ấy).",
+            "'Buy' cũng có thể dùng trong các cụm từ như 'buy into' (chấp nhận hoặc tin vào điều gì đó), ví dụ: 'I don’t buy into that idea' (Tôi không tin vào ý tưởng đó)."
+        ],
+        "wait": [
+            "'Wait' có nghĩa là chờ đợi, ví dụ: 'I will wait for you outside' (Tôi sẽ chờ bạn ngoài cửa).",
+            "'Wait' cũng có thể chỉ việc trì hoãn hoặc giữ lại, ví dụ: 'We have to wait for the results' (Chúng ta phải chờ kết quả).",
+            "'Wait' còn có thể diễn tả sự chờ đợi trong một trạng thái yên tĩnh, ví dụ: 'I waited patiently for my turn' (Tôi đã kiên nhẫn chờ đợi lượt của mình).",
+            "'Wait' còn có thể dùng trong các câu hỏi, ví dụ: 'Are you waiting for someone?' (Bạn có đang chờ ai không?)."
+        ],
+    }
     
     if user_input in responses:
         return random.choice(responses[user_input])

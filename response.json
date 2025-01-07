@@ -1,4 +1,4 @@
 {
-    "user_input": "Sách học tiếng Anh",
-    "bot_reply": "Sách 'The Elements of Style' cung cấp những quy tắc quan trọng giúp bạn viết tiếng Anh một cách rõ ràng và chính xác."
+    "user_input": "ask",
+    "bot_reply": "'Ask' còn dùng trong các cụm từ như 'ask for' (yêu cầu cái gì), ví dụ: 'I will ask for the bill' (Tôi sẽ yêu cầu tính tiền)."
 }
