@@ -307,6 +307,132 @@ def bot_response(user_input):
             "'Wait' còn có thể diễn tả sự chờ đợi trong một trạng thái yên tĩnh, ví dụ: 'I waited patiently for my turn' (Tôi đã kiên nhẫn chờ đợi lượt của mình).",
             "'Wait' còn có thể dùng trong các câu hỏi, ví dụ: 'Are you waiting for someone?' (Bạn có đang chờ ai không?)."
         ],
+        "eat": [
+            "'Eat' có nghĩa là ăn, ví dụ: 'I eat breakfast at 7 AM' (Tôi ăn sáng lúc 7 giờ sáng).",
+            "'Eat' cũng có thể chỉ hành động tiêu thụ thức ăn, ví dụ: 'She eats a lot of vegetables' (Cô ấy ăn nhiều rau).",
+            "'Eat' còn có thể dùng trong các cụm từ như 'eat out' (ăn ngoài), ví dụ: 'We usually eat out on weekends' (Chúng tôi thường ăn ngoài vào cuối tuần).",
+            "'Eat' cũng có thể diễn tả việc ăn uống trong trạng thái vui vẻ, ví dụ: 'They ate happily at the party' (Họ ăn vui vẻ trong bữa tiệc)."
+        ],
+        "drive": [
+            "'Drive' có nghĩa là lái xe, ví dụ: 'I drive to work every day' (Tôi lái xe đi làm mỗi ngày).",
+            "'Drive' cũng có thể chỉ việc điều khiển phương tiện, ví dụ: 'He is learning to drive' (Anh ấy đang học lái xe).",
+            "'Drive' còn có thể diễn tả sự thúc đẩy, ví dụ: 'His ambition drives him to succeed' (Khát vọng của anh ấy thúc đẩy anh ấy thành công).",
+            "'Drive' cũng có thể dùng trong các câu yêu cầu, ví dụ: 'Can you drive me home?' (Bạn có thể lái xe đưa tôi về nhà không?)."
+        ],
+        "play": [
+            "'Play' có nghĩa là chơi, ví dụ: 'They play football every weekend' (Họ chơi bóng đá mỗi cuối tuần).",
+            "'Play' cũng có thể chỉ việc tham gia vào một hoạt động giải trí, ví dụ: 'She loves to play the piano' (Cô ấy thích chơi đàn piano).",
+            "'Play' còn có thể chỉ sự tham gia vào một vai trò trong kịch, ví dụ: 'He played the lead role in the play' (Anh ấy đóng vai chính trong vở kịch).",
+            "'Play' cũng có thể dùng trong các câu yêu cầu, ví dụ: 'Play some music' (Hãy bật một chút nhạc)."
+        ],
+        "study": [
+            "'Study' có nghĩa là học, ví dụ: 'I study English every day' (Tôi học tiếng Anh mỗi ngày).",
+            "'Study' cũng có thể chỉ việc nghiên cứu, ví dụ: 'She is studying medicine at the university' (Cô ấy đang học y khoa ở trường đại học).",
+            "'Study' còn có thể chỉ sự chăm chú tìm hiểu một chủ đề, ví dụ: 'I need to study for the test' (Tôi cần học cho kỳ thi).",
+            "'Study' cũng có thể dùng trong các câu yêu cầu, ví dụ: 'Study hard for the exam' (Học chăm chỉ cho kỳ thi)."
+        ],
+        "hiện tại đơn": [
+            "Khi nào thì sử dụng thì 'Hiện tại đơn' để diễn tả thói quen hoặc hành động lặp đi lặp lại? Ví dụ: 'Tôi đi học mỗi ngày'.",
+            "'Hiện tại đơn' có thể được dùng để diễn tả một sự thật hiển nhiên không? Ví dụ: 'Mặt trời mọc ở phía Đông'.",
+            "Câu phủ định trong 'Hiện tại đơn' được tạo như thế nào? Ví dụ: 'Anh ấy không chơi thể thao'.",
+            "'Hiện tại đơn' có thể dùng để hỏi về sự thật hay thói quen không? Ví dụ: 'Bạn thích cà phê không?'"
+        ],
+        "hiện tại tiếp diễn": [
+            "'Hiện tại tiếp diễn' được dùng khi nào để chỉ hành động đang xảy ra ở thời điểm nói? Ví dụ: 'Tôi đang ăn tối'.",
+            "'Hiện tại tiếp diễn' có thể chỉ sự thay đổi hoặc phát triển không? Ví dụ: 'Trời đang lạnh dần'.",
+            "'Hiện tại tiếp diễn' có thể chỉ một kế hoạch trong tương lai không? Ví dụ: 'Chúng tôi đang đi du lịch vào cuối tuần'.",
+            "Câu phủ định trong 'Hiện tại tiếp diễn' được tạo như thế nào? Ví dụ: 'Cô ấy không làm việc bây giờ'."
+        ],
+        "quá khứ đơn": [
+            "Khi nào sử dụng thì 'Quá khứ đơn' để diễn tả hành động đã xảy ra và kết thúc trong quá khứ? Ví dụ: 'Tôi đã thăm Hà Nội mùa hè năm ngoái'.",
+            "'Quá khứ đơn' có thể được sử dụng khi nào để diễn tả một sự kiện trong quá khứ không? Ví dụ: 'Anh ấy tốt nghiệp năm ngoái'.",
+            "'Quá khứ đơn' có thể dùng để hỏi về một sự kiện trong quá khứ không? Ví dụ: 'Bạn đã làm bài tập chưa?'",
+            "Làm thế nào để phủ định một câu với 'Quá khứ đơn'? Ví dụ: 'Tôi không đi đến đó hôm qua'."
+        ],
+        "quá khứ tiếp diễn": [
+            "'Quá khứ tiếp diễn' dùng để diễn tả hành động đang xảy ra tại một thời điểm trong quá khứ phải không? Ví dụ: 'Tôi đang đọc sách khi cô ấy gọi điện'.",
+            "Thì 'Quá khứ tiếp diễn' có thể chỉ một hành động đang xảy ra song song với một hành động khác trong quá khứ không? Ví dụ: 'Khi tôi đến, họ đang chơi bóng'.",
+            "Câu phủ định trong 'Quá khứ tiếp diễn' được tạo như thế nào? Ví dụ: 'Chúng tôi không đang nói chuyện lúc đó'.",
+            "'Quá khứ tiếp diễn' có thể được sử dụng để nói về một kế hoạch đã bị gián đoạn trong quá khứ không? Ví dụ: 'Cô ấy đang chuẩn bị bữa tối thì có điện thoại'."
+        ],
+        "tương lai đơn": [
+            "'Tương lai đơn' được sử dụng khi nào để diễn tả một hành động sẽ xảy ra trong tương lai? Ví dụ: 'Tôi sẽ đi du lịch vào mùa hè'.",
+            "'Tương lai đơn' có thể được sử dụng để diễn tả quyết định hay lời hứa không? Ví dụ: 'Tôi hứa sẽ giúp bạn'.",
+            "'Tương lai đơn' có thể dùng trong các câu hỏi về dự định tương lai không? Ví dụ: 'Bạn sẽ đi đâu vào cuối tuần?'",
+            "Câu phủ định trong 'Tương lai đơn' được tạo như thế nào? Ví dụ: 'Tôi sẽ không đi làm vào thứ Bảy'."
+        ],
+        "tương lai tiếp diễn": [
+            "'Tương lai tiếp diễn' được dùng khi nào để diễn tả hành động sẽ đang xảy ra tại một thời điểm trong tương lai? Ví dụ: 'Vào lúc 8 giờ tối mai, tôi sẽ đang xem phim'.",
+            "'Tương lai tiếp diễn' có thể chỉ sự kế hoạch đã được lên lịch sẵn không? Ví dụ: 'Chúng tôi sẽ đang họp vào ngày mai'.",
+            "'Tương lai tiếp diễn' có thể dùng để diễn tả một sự kiện xảy ra song song với một sự kiện khác trong tương lai không? Ví dụ: 'Khi bạn gọi tôi, tôi sẽ đang làm việc'.",
+            "Câu phủ định trong 'Tương lai tiếp diễn' được tạo như thế nào? Ví dụ: 'Tôi sẽ không đang làm bài tập lúc đó'."
+        ],
+        "hiện tại hoàn thành": [
+            "'Hiện tại hoàn thành' dùng để diễn tả hành động đã hoàn thành trong quá khứ nhưng có ảnh hưởng đến hiện tại không? Ví dụ: 'Tôi đã ăn trưa'.",
+            "Khi nào sử dụng 'Hiện tại hoàn thành' để diễn tả kinh nghiệm trong quá khứ? Ví dụ: 'Tôi đã từng đi Nhật'.",
+            "'Hiện tại hoàn thành' có thể dùng để diễn tả hành động đã xảy ra và vẫn tiếp tục ảnh hưởng đến hiện tại không? Ví dụ: 'Cô ấy đã sống ở đây 5 năm rồi'.",
+            "Câu phủ định trong 'Hiện tại hoàn thành' được tạo như thế nào? Ví dụ: 'Tôi chưa làm xong bài tập'."
+        ],
+        "hiện tại hoàn thành tiếp diễn": [
+            "'Hiện tại hoàn thành tiếp diễn' được dùng khi nào để diễn tả hành động bắt đầu trong quá khứ và vẫn tiếp diễn đến hiện tại? Ví dụ: 'Tôi đã học tiếng Anh 5 năm'.",
+            "'Hiện tại hoàn thành tiếp diễn' có thể chỉ sự nhấn mạnh vào thời gian của hành động không? Ví dụ: 'Cô ấy đã làm việc ở công ty này hơn 10 năm rồi'.",
+            "'Hiện tại hoàn thành tiếp diễn' có thể dùng để chỉ hành động đang gây ra kết quả rõ ràng ở hiện tại không? Ví dụ: 'Tôi đã đợi bạn cả buổi sáng'.",
+            "Câu phủ định trong 'Hiện tại hoàn thành tiếp diễn' được tạo như thế nào? Ví dụ: 'Tôi không đã đợi bạn lâu'."
+        ],
+        "câu điều kiện loại 1": [
+            "Câu điều kiện loại 1 được sử dụng để diễn tả tình huống có thể xảy ra trong tương lai nếu điều kiện xảy ra. Ví dụ: 'If it rains, I will stay home'.",
+            "Câu điều kiện loại 1 có thể dùng để diễn tả một lời khuyên hoặc đề nghị không? Ví dụ: 'If you study hard, you will pass the exam'.",
+            "Câu điều kiện loại 1 có thể được sử dụng để chỉ một sự kiện có thể xảy ra dựa trên điều kiện trong tương lai không? Ví dụ: 'If she arrives on time, we will start the meeting'.",
+            "Câu điều kiện loại 1 trong câu phủ định có thể tạo ra như thế nào? Ví dụ: 'If it doesn't rain, we will go to the park'."
+        ],
+        "câu điều kiện loại 2": [
+            "Câu điều kiện loại 2 được sử dụng khi nói về điều kiện giả định trong hiện tại hoặc tương lai. Ví dụ: 'If I were you, I would talk to her'.",
+            "Câu điều kiện loại 2 có thể dùng để nói về điều kiện không có thật trong hiện tại không? Ví dụ: 'If he were here, he would help us'.",
+            "Câu điều kiện loại 2 có thể dùng để thể hiện sự không chắc chắn về một tình huống không có thật không? Ví dụ: 'If I won the lottery, I would travel the world'.",
+            "Câu điều kiện loại 2 phủ định có thể tạo như thế nào? Ví dụ: 'If I didn't know him, I wouldn't trust him'."
+        ],
+        "câu điều kiện loại 3": [
+            "Câu điều kiện loại 3 dùng để nói về tình huống không có thật trong quá khứ, ví dụ: 'If I had studied harder, I would have passed the exam'.",
+            "Câu điều kiện loại 3 có thể dùng để diễn tả sự tiếc nuối về điều đã không xảy ra trong quá khứ không? Ví dụ: 'If they had left earlier, they would have caught the train'.",
+            "'Câu điều kiện loại 3' có thể sử dụng khi muốn nói về kết quả trong quá khứ nếu điều kiện đã xảy ra không? Ví dụ: 'If you had asked me, I would have helped you'.",
+            "Câu điều kiện loại 3 có thể dùng trong câu phủ định như thế nào? Ví dụ: 'If I had known about the problem, I wouldn't have made that mistake'."
+        ],
+        "câu bị động": [
+            "Câu bị động được dùng khi chủ ngữ của câu là người hoặc vật chịu hành động, ví dụ: 'The book was read by him'.",
+            "Câu bị động có thể dùng khi nào để nhấn mạnh vào kết quả của hành động thay vì người thực hiện hành động? Ví dụ: 'The car was repaired yesterday'.",
+            "Cấu trúc câu bị động trong quá khứ đơn là gì? Ví dụ: 'The letter was sent last week'.",
+            "Câu bị động có thể dùng trong các câu hỏi không? Ví dụ: 'Was the report submitted on time?'"
+        ],
+        "câu phủ định": [
+            "Câu phủ định trong thì hiện tại đơn được tạo như thế nào? Ví dụ: 'He does not like coffee'.",
+            "Câu phủ định trong thì quá khứ đơn được tạo ra như thế nào? Ví dụ: 'She did not go to the party'.",
+            "Câu phủ định trong thì tương lai đơn có thể tạo ra như thế nào? Ví dụ: 'I will not attend the meeting tomorrow'.",
+            "Câu phủ định có thể dùng để nhấn mạnh sự không đồng ý không? Ví dụ: 'I do not want to do that'."
+        ],
+        "câu hỏi đuôi": [
+            "Câu hỏi đuôi dùng để xác nhận hoặc hỏi ý kiến của người khác. Ví dụ: 'You are coming to the party, aren't you?'",
+            "Câu hỏi đuôi có thể được sử dụng khi nào để hỏi lại thông tin mà người nói đã biết hoặc cho là đúng? Ví dụ: 'She's your sister, isn't she?'",
+            "Câu hỏi đuôi trong câu phủ định sẽ như thế nào? Ví dụ: 'You don't like ice cream, do you?'",
+            "'Câu hỏi đuôi' có thể dùng trong các câu hỏi ngắn không? Ví dụ: 'They've finished, haven't they?'"
+        ],
+        "tính từ sở hữu": [
+            "Tính từ sở hữu được dùng khi nào để chỉ sự sở hữu của người nói đối với vật gì? Ví dụ: 'This is my book'.",
+            "Tính từ sở hữu có thể dùng để nói về sự sở hữu của người khác không? Ví dụ: 'That is his car'.",
+            "Câu hỏi sử dụng tính từ sở hữu được tạo như thế nào? Ví dụ: 'Is that your pen?'",
+            "'Tính từ sở hữu' có thể dùng trong câu phủ định không? Ví dụ: 'This is not my book'."
+        ],
+        "cấu trúc so sánh": [
+            "Cấu trúc so sánh hơn dùng để so sánh hai đối tượng. Ví dụ: 'This book is more interesting than that one'.",
+            "Cấu trúc so sánh nhất được dùng khi nào để chỉ một đối tượng vượt trội hơn tất cả các đối tượng khác? Ví dụ: 'She is the tallest in the class'.",
+            "Cấu trúc so sánh ngang bằng có thể được sử dụng như thế nào? Ví dụ: 'She is as tall as her brother'.",
+            "'Cấu trúc so sánh' có thể dùng trong câu hỏi không? Ví dụ: 'Is this exam more difficult than the last one?'"
+        ],
+        "cấu trúc too... to": [
+            "Cấu trúc 'too... to' dùng để diễn tả sự không thể thực hiện hành động vì lý do nào đó. Ví dụ: 'This bag is too heavy to carry'.",
+            "Cấu trúc 'too... to' có thể dùng để chỉ sự hạn chế không? Ví dụ: 'He is too tired to go out'.",
+            "Cấu trúc 'too... to' có thể dùng trong các câu phủ định không? Ví dụ: 'The chair is not too high to sit on'.",
+            "'Too... to' có thể dùng trong các câu hỏi không? Ví dụ: 'Is this book too difficult to read?'"
+        ],
     }
     
     if user_input in responses:
